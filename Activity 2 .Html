@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Validation In API</h1>
+    <input id="inp" type="number" min="100" max="1000" required><br><br>
+    <button onclick="validate()">OK</button>
+     <p id="p1"></p>
+
+    <script>
+   function validate() {
+     var num  = document.getElementById("inp");
+     if (!num.checkValidity()) {
+        document.getElementById("p1").innerHTML = num.validationMessage;
+        
+     }
+     else{
+        document.getElementById("p1").innerHTML = "Input is OK!"
+     }
+   }
+    </script>
+</body>
+
+</html>
